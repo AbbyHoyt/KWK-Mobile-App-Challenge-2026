@@ -5,6 +5,8 @@
 //  Created by Abby Hoyt on 6/27/26.
 //
 
+// Comment to test Git workflow.
+
 import SwiftUI
 
 struct ContentView: View {
