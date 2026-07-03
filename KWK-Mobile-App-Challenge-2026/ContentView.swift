@@ -10,10 +10,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Hello, World!")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(Color.green)
+            Image("flowers")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fit)
+            Link(destination: URL(string: "https://www.kodewithklossy.com")!) {
+                Text("Kode With Klossy Website")
+            }
         }
         .padding()
     }
