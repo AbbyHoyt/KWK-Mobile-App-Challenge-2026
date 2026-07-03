@@ -18,6 +18,8 @@ struct HomeView: View {
     let white = Color(red: 232 / 255.0, green: 237 / 255.0, blue: 242 / 255.0)
     let gray = Color(red: 44 / 255.0, green: 57 / 255.0, blue: 71 / 255.0)
     
+    @State private var colorName: String = ""
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -52,6 +54,33 @@ struct HomeView: View {
                         .frame(width: 375)
                         .frame(height: 0.5)
                         .overlay(gray)
+                    
+                    Text("Add a Color")
+                        .padding(20)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .fontWeight(.bold)
+                        .foregroundColor(gray)
+                        .font(.title2)
+                    
+                    HStack(spacing: 0) {
+                        Text("Name:")
+                            .padding(.leading, 20)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .fontWeight(.bold)
+                            .foregroundColor(gray)
+                        
+                        TextField("e.g., Lemon Yellow", text: $colorName)
+                            .frame(width: 300, height: 45)
+                            .textFieldStyle(.roundedBorder)
+                            .padding(.trailing, 20)
+                    }
+                    
+                    Text("Color:")
+                        .padding(.leading, 20)
+                        .padding(.top, 20)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .fontWeight(.bold)
+                        .foregroundColor(gray)
                     
                     Spacer()
                     
