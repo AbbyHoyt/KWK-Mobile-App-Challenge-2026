@@ -26,10 +26,10 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    Image("logo")
+                    Image("logo-new")
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
-                        .cornerRadius(30)
+                        .cornerRadius(150)
                         .padding(.horizontal, 50)
                     
                     Text("App Name Here")
