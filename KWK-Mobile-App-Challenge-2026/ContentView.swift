@@ -9,19 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Hello, World!")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(Color.green)
-            Image("flowers")
-                .resizable(resizingMode: .stretch)
-                .aspectRatio(contentMode: .fit)
-            Link(destination: URL(string: "https://www.kodewithklossy.com")!) {
-                Text("Kode With Klossy Website")
+        NavigationStack {
+            VStack {
+                Text("Hello, World!")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.green)
+                Image("flowers")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                Link(destination: URL(string: "https://www.kodewithklossy.com")!) {
+                    Text("Kode With Klossy Website")
+                }
+                
+                NavigationLink(destination: HomeView()) {
+                    Text("Go to Home Page!")
+                }
             }
+            .padding()
         }
-        .padding()
+        .navigationTitle("Landing")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
     }
 }
 
