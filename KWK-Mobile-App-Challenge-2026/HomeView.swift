@@ -21,6 +21,7 @@ struct HomeView: View {
     @State private var colorName: String = ""
     @State private var colorSelection: Color = .pink
     @State private var colorDescription: String = ""
+    @State private var colorTags: String = ""
     
     var body: some View {
         NavigationStack {
@@ -29,13 +30,6 @@ struct HomeView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    Text("")
-                    
-                    Divider()
-                        .frame(width: 375)
-                        .frame(height: 0.5)
-                        .overlay(gray)
-                    
                     HStack(alignment: .center) {
                         Image("logo-new")
                             .resizable()
@@ -53,7 +47,7 @@ struct HomeView: View {
                     }
                     
                     Divider()
-                        .frame(width: 375)
+                        .frame(width: .infinity)
                         .frame(height: 0.5)
                         .overlay(gray)
                     
@@ -88,6 +82,7 @@ struct HomeView: View {
                         .fill(colorSelection)
                         .frame(width: 375, height: 125)
                         .padding(.horizontal, 20)
+                        .padding(.top, 10)
                     
                     Text("Description:")
                         .padding(.leading, 20)
@@ -98,9 +93,35 @@ struct HomeView: View {
                     
                     TextField("e.g., Saw this color at the park!", text: $colorDescription)
                         .frame(width: 375, height: 45)
-                        .frame(minHeight: 100, alignment: .top)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 20)
+                    
+                    Text("Tags:")
+                        .padding(.leading, 20)
+                        .padding(.top, 20)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .fontWeight(.bold)
+                        .foregroundColor(gray)
+                    
+                    TextField("e.g., #Summer, #Neon", text: $colorTags)
+                        .frame(width: 375, height: 45)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 10)
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Button("Submit Color") {
+                            print("Adding color...")
+                        }
+                        .fontWeight(.bold)
+                        .foregroundColor(white)
+                        .padding(7)
+                        .background(gray)
+                        .cornerRadius(10)
+                        .padding(.trailing, 20)
+                    }
                     
                     Spacer()
                     
