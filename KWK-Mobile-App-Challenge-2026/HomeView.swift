@@ -19,6 +19,8 @@ struct HomeView: View {
     let gray = Color(red: 44 / 255.0, green: 57 / 255.0, blue: 71 / 255.0)
     
     @State private var colorName: String = ""
+    @State private var colorSelection: Color = .pink
+    @State private var colorDescription: String = ""
     
     var body: some View {
         NavigationStack {
@@ -70,17 +72,35 @@ struct HomeView: View {
                             .foregroundColor(gray)
                         
                         TextField("e.g., Lemon Yellow", text: $colorName)
-                            .frame(width: 300, height: 45)
+                            .frame(width: 315, height: 45)
                             .textFieldStyle(.roundedBorder)
                             .padding(.trailing, 20)
                     }
                     
-                    Text("Color:")
+                    ColorPicker("Select a Color:", selection: $colorSelection, supportsOpacity: true)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 20)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .fontWeight(.bold)
+                        .foregroundColor(gray)
+                    
+                    RoundedRectangle(cornerRadius: 15)
+                        .fill(colorSelection)
+                        .frame(width: 375, height: 125)
+                        .padding(.horizontal, 20)
+                    
+                    Text("Description:")
                         .padding(.leading, 20)
                         .padding(.top, 20)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .fontWeight(.bold)
                         .foregroundColor(gray)
+                    
+                    TextField("e.g., Saw this color at the park!", text: $colorDescription)
+                        .frame(width: 375, height: 45)
+                        .frame(minHeight: 100, alignment: .top)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(.horizontal, 20)
                     
                     Spacer()
                     
