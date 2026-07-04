@@ -13,6 +13,11 @@ struct LibraryView: View {
     let gray = Color(red: 44 / 255.0, green: 57 / 255.0, blue: 71 / 255.0)
     let blue = Color(red: 82 / 255.0, green: 122 / 255.0, blue: 149 / 255.0)
     
+    let name: String
+    let selection: Color
+    let description: String
+    let tags: String
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -224,6 +229,49 @@ struct LibraryView: View {
                             .frame(height: 0.5)
                             .overlay(gray)
                         
+                        HStack {
+                            VStack {
+                                RoundedRectangle(cornerRadius: 15)
+                                    .frame(width: 75, height: 75)
+                                    .foregroundColor(selection)
+                                
+                                Text(name)
+                                    .font(.custom("Cabin", size: 22))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(gray)
+                                    .multilineTextAlignment(.center)
+                            }
+                            .padding(.trailing, 20)
+                            .frame(width: 175)
+                            
+                            Spacer()
+                            
+                            VStack {
+                                Text(description)
+                                    .font(.custom("Cabin", size: 18))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(gray)
+                                    .padding(.bottom, 10)
+                                    .multilineTextAlignment(.leading)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                
+                                Text(tags)
+                                    .font(.custom("Cabin", size: 18))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(blue)
+                                    .multilineTextAlignment(.leading)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            }
+                            .frame(width: 175)
+                            .fixedSize(horizontal: false, vertical: true)
+                        }
+                        .padding(20)
+                        
+                        Divider()
+                            .frame(width: 375)
+                            .frame(height: 0.5)
+                            .overlay(gray)
+                        
                         Spacer()
                     }
                 }
@@ -234,5 +282,5 @@ struct LibraryView: View {
 }
 
 #Preview {
-    LibraryView()
+    LibraryView(name: "Name", selection: Color.white, description: "Description", tags: "Tags")
 }

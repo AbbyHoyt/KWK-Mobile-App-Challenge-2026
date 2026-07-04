@@ -17,6 +17,13 @@ struct HomeView: View {
     @State private var colorDescription: String = ""
     @State private var colorTags: String = ""
     
+    enum colorDetails {
+        case text(String)
+        case color(Color)
+    }
+    
+    @State private var userColor: [colorDetails] = []
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -116,7 +123,15 @@ struct HomeView: View {
                         Spacer()
                         
                         Button("Submit Color") {
-                            print("Adding color...")
+                            userColor.append(.text(colorName))
+                            userColor.append(.color(colorSelection))
+                            userColor.append(.text(colorDescription))
+                            userColor.append(.text(colorTags))
+                            
+                            colorName = ""
+                            colorSelection = Color.pink
+                            colorDescription = ""
+                            colorTags = ""
                         }
                         .font(.custom("Cabin", size: 20))
                         .fontWeight(.bold)
@@ -135,16 +150,15 @@ struct HomeView: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: LibraryView()) {
-                        Text("VIEW YOUR LIBRARY")
-                        .font(.custom("Anton", size: 24))
-                        .fontWeight(.bold)
-                        .foregroundColor(white)
-                        .padding(15)
-                        .background(gray)
-                        .cornerRadius(10)
+                    NavigationLink("VIEW YOUR LIBRARY") {
+                        LibraryView(name: colorName, selection: colorSelection, description: colorDescription, tags: colorTags)
                     }
-                    .padding(.top, 15)
+                    .font(.custom("Anton", size: 24))
+                    .fontWeight(.bold)
+                    .foregroundColor(white)
+                    .padding(15)
+                    .background(gray)
+                    .cornerRadius(10)
                 }
             }
             .navigationBarBackButtonHidden(true)
