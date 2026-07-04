@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     // Define color palette.    
     let white = Color(red: 232 / 255.0, green: 237 / 255.0, blue: 242 / 255.0)
     let gray = Color(red: 44 / 255.0, green: 57 / 255.0, blue: 71 / 255.0)
