@@ -150,19 +150,6 @@ struct HomeView: View {
                             .frame(width: .infinity)
                             .frame(height: 0.5)
                             .overlay(gray)
-                        
-//                        Spacer()
-//                        
-//                        NavigationLink("VIEW YOUR LIBRARY") {
-//                            LibraryView(name: colorName, selection: colorSelection, description: colorDescription, tags: colorTags)
-//                        }
-//                        .font(.custom("Anton", size: 24))
-//                        .fontWeight(.bold)
-//                        .foregroundColor(white)
-//                        .padding(15)
-//                        .background(gray)
-//                        .cornerRadius(10)
-//                        .padding(.top, 20)
                     }
                     
                     
@@ -232,15 +219,19 @@ struct HomeView: View {
                         }
                     }
                     
-
-                    
-                    
-                    
-                    
+                    NavigationLink("ABOUT COLOR KEEPER") {
+                        AboutView()
+                    }
+                    .font(.custom("Anton", size: 20))
+                    .fontWeight(.bold)
+                    .foregroundColor(white)
+                    .padding(15)
+                    .background(gray)
+                    .cornerRadius(10)
+                    .padding(.top, 20)
                 }
                 .frame(height: nil)
             }
-            .navigationBarBackButtonHidden(true)
         }
     }
     
