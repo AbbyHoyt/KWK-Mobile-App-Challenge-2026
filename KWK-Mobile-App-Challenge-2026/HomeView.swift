@@ -17,6 +17,7 @@ struct HomeView: View {
     
     let white = Color(red: 232 / 255.0, green: 237 / 255.0, blue: 242 / 255.0)
     let gray = Color(red: 44 / 255.0, green: 57 / 255.0, blue: 71 / 255.0)
+    let blue = Color(red: 84 / 255.0, green: 122 / 255.0, blue: 149 / 255.0)
     
     @State private var colorName: String = ""
     @State private var colorSelection: Color = .pink
@@ -38,8 +39,8 @@ struct HomeView: View {
                             .cornerRadius(150)
                             .padding(.horizontal, 20)
                         
-                        Text("App Name Here")
-                            .font(.title)
+                        Text("Color Keeper")
+                            .font(.custom("Anton", size: 35))
                             .fontWeight(.bold)
                             .foregroundColor(gray)
                         
@@ -50,46 +51,52 @@ struct HomeView: View {
                         .frame(width: .infinity)
                         .frame(height: 0.5)
                         .overlay(gray)
+                        .padding(.top, -10)
                     
                     Text("Add a Color")
+                        .font(.custom("Anton", size: 28))
+                        .fontWeight(.bold)
                         .padding(20)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .fontWeight(.bold)
                         .foregroundColor(gray)
-                        .font(.title2)
+                        .padding(.top, -15)
                     
                     HStack(spacing: 0) {
                         Text("Name:")
-                            .padding(.leading, 20)
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .font(.custom("Cabin", size: 22))
                             .fontWeight(.bold)
                             .foregroundColor(gray)
+                            .padding(.leading, 20)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         
                         TextField("e.g., Lemon Yellow", text: $colorName)
-                            .frame(width: 315, height: 45)
+                            .frame(width: 300, height: 45)
                             .textFieldStyle(.roundedBorder)
                             .padding(.trailing, 20)
                     }
+                    .padding(.top, -15)
                     
                     ColorPicker("Select a Color:", selection: $colorSelection, supportsOpacity: true)
-                        .padding(.horizontal, 20)
-                        .padding(.top, 20)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .font(.custom("Cabin", size: 22))
                         .fontWeight(.bold)
                         .foregroundColor(gray)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 10)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     
                     RoundedRectangle(cornerRadius: 15)
                         .fill(colorSelection)
                         .frame(width: 375, height: 125)
                         .padding(.horizontal, 20)
-                        .padding(.top, 10)
+                        .padding(.top, 5)
                     
                     Text("Description:")
-                        .padding(.leading, 20)
-                        .padding(.top, 20)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .font(.custom("Cabin", size: 22))
                         .fontWeight(.bold)
                         .foregroundColor(gray)
+                        .padding(.leading, 20)
+                        .padding(.top, 10)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     
                     TextField("e.g., Saw this color at the park!", text: $colorDescription)
                         .frame(width: 375, height: 45)
@@ -97,11 +104,12 @@ struct HomeView: View {
                         .padding(.horizontal, 20)
                     
                     Text("Tags:")
-                        .padding(.leading, 20)
-                        .padding(.top, 20)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .font(.custom("Cabin", size: 22))
                         .fontWeight(.bold)
                         .foregroundColor(gray)
+                        .padding(.leading, 20)
+                        .padding(.top, 10)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     
                     TextField("e.g., #Summer, #Neon", text: $colorTags)
                         .frame(width: 375, height: 45)
@@ -115,24 +123,35 @@ struct HomeView: View {
                         Button("Submit Color") {
                             print("Adding color...")
                         }
+                        .font(.custom("Cabin", size: 20))
                         .fontWeight(.bold)
                         .foregroundColor(white)
-                        .padding(7)
-                        .background(gray)
+                        .padding(10)
+                        .background(blue)
                         .cornerRadius(10)
                         .padding(.trailing, 20)
                     }
+                    .padding(.bottom, 15)
+                    
+                    Divider()
+                        .frame(width: .infinity)
+                        .frame(height: 0.5)
+                        .overlay(gray)
                     
                     Spacer()
                     
                     NavigationLink(destination: LibraryView()) {
-                        Text("View Your Library")
-                            .fontWeight(.bold)
-                            .foregroundColor(white)
-                            .padding(15)
-                            .background(gray)
-                            .cornerRadius(10)
+                        Button("View Your Library") {
+                            
+                        }
+                        .font(.custom("Anton", size: 24))
+                        .fontWeight(.bold)
+                        .foregroundColor(white)
+                        .padding(15)
+                        .background(gray)
+                        .cornerRadius(10)
                     }
+                    .padding(.top, 15)
                 }
             }
             .navigationBarBackButtonHidden(true) 

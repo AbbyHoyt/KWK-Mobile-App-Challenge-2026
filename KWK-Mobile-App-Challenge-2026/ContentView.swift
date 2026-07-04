@@ -31,15 +31,17 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .cornerRadius(150)
                         .padding(.horizontal, 50)
+                        .padding(.bottom, 5)
                     
-                    Text("App Name Here")
-                        .font(.title)
+                    Text("Color Keeper")
+                        .font(.custom("Anton-Regular", size: 45))
                         .fontWeight(.bold)
                         .foregroundColor(gray)
-                        .padding(.bottom, 30)
+                        .padding(.bottom, 60)
                     
                     NavigationLink(destination: HomeView()) {
                         Text("Get Started")
+                            .font(.custom("Cabin", size: 24))
                             .fontWeight(.bold)
                             .foregroundColor(white)
                             .padding(15)

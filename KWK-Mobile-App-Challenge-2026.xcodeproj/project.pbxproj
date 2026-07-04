@@ -10,9 +10,22 @@
 		DAB936BC2FF0AD9F00B30150 /* KWK-Mobile-App-Challenge-2026.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KWK-Mobile-App-Challenge-2026.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DAF044A32FF87D8200BE56EC /* Exceptions for "KWK-Mobile-App-Challenge-2026" folder in "KWK-Mobile-App-Challenge-2026" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DAB936BB2FF0AD9F00B30150 /* KWK-Mobile-App-Challenge-2026 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DAB936BE2FF0AD9F00B30150 /* KWK-Mobile-App-Challenge-2026 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DAF044A32FF87D8200BE56EC /* Exceptions for "KWK-Mobile-App-Challenge-2026" folder in "KWK-Mobile-App-Challenge-2026" target */,
+			);
 			path = "KWK-Mobile-App-Challenge-2026";
 			sourceTree = "<group>";
 		};
@@ -253,6 +266,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "KWK-Mobile-App-Challenge-2026/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +298,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "KWK-Mobile-App-Challenge-2026/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

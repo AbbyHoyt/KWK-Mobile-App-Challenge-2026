@@ -25,13 +25,6 @@ struct LibraryView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    Text("")
-                    
-                    Divider()
-                        .frame(width: 375)
-                        .frame(height: 0.5)
-                        .overlay(gray)
-                    
                     HStack(alignment: .center) {
                         Image("logo-new")
                             .resizable()
@@ -40,7 +33,7 @@ struct LibraryView: View {
                             .cornerRadius(150)
                             .padding(.horizontal, 20)
                         
-                        Text("App Name Here")
+                        Text("Color Keeper")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(gray)
@@ -49,7 +42,7 @@ struct LibraryView: View {
                     }
                     
                     Divider()
-                        .frame(width: 375)
+                        .frame(width: .infinity)
                         .frame(height: 0.5)
                         .overlay(gray)
                     
