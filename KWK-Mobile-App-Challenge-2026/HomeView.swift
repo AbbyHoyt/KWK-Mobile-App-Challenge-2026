@@ -151,22 +151,31 @@ struct HomeView: View {
                             .frame(height: 0.5)
                             .overlay(gray)
                         
-                        Spacer()
-                        
-                        NavigationLink("VIEW YOUR LIBRARY") {
-                            LibraryView(name: colorName, selection: colorSelection, description: colorDescription, tags: colorTags)
-                        }
-                        .font(.custom("Anton", size: 24))
-                        .fontWeight(.bold)
-                        .foregroundColor(white)
-                        .padding(15)
-                        .background(gray)
-                        .cornerRadius(10)
-                        .padding(.top, 20)
+//                        Spacer()
+//                        
+//                        NavigationLink("VIEW YOUR LIBRARY") {
+//                            LibraryView(name: colorName, selection: colorSelection, description: colorDescription, tags: colorTags)
+//                        }
+//                        .font(.custom("Anton", size: 24))
+//                        .fontWeight(.bold)
+//                        .foregroundColor(white)
+//                        .padding(15)
+//                        .background(gray)
+//                        .cornerRadius(10)
+//                        .padding(.top, 20)
                     }
                     
                     
                     // Space to add new colors:
+                    Text("LIBRARY")
+                        .font(.custom("Anton", size: 28))
+                        .fontWeight(.bold)
+                        .padding(20)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(gray)
+                        .padding(.top, -15)
+                        .padding(.bottom, -25)
+                    
                     VStack(spacing: 10) {
                         if items.isEmpty {
                             Text("No colors in your library yet!")
