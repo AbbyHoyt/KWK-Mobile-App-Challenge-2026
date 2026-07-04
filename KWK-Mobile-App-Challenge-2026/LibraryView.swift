@@ -55,17 +55,12 @@ struct LibraryView: View {
                         VStack {
                             RoundedRectangle(cornerRadius: 15)
                                 .frame(width: 75, height: 75)
-                                .foregroundColor(Color.red)
+                                .foregroundColor(Color.teal)
                             
-                            Text("Cherry Red")
+                            Text("Waimānalo Beach")
                                 .font(.custom("Cabin", size: 22))
                                 .fontWeight(.bold)
                                 .foregroundColor(gray)
-                            
-                            Text("#summer, #neon")
-                                .font(.custom("Cabin", size: 18))
-                                .fontWeight(.bold)
-                                .foregroundColor(blue)
                                 .multilineTextAlignment(.center)
                         }
                         .padding(.trailing, 20)
@@ -73,29 +68,83 @@ struct LibraryView: View {
                         
                         Spacer()
                         
-                        Text("Placeholder text goes here!")
-                            .font(.custom("Cabin", size: 18))
-                            .fontWeight(.bold)
-                            .foregroundColor(gray)
-                            .frame(width: 175)
+                        VStack {
+                            Text("The color of the ocean and the sky in Hawaii.")
+                                .font(.custom("Cabin", size: 18))
+                                .fontWeight(.bold)
+                                .foregroundColor(gray)
+                                .padding(.bottom, 10)
+                                .multilineTextAlignment(.leading)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            
+                            Text("#vacation, #blue, #summer")
+                                .font(.custom("Cabin", size: 18))
+                                .fontWeight(.bold)
+                                .foregroundColor(blue)
+                                .multilineTextAlignment(.leading)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .frame(width: 175)
                     }
                     .padding(20)
                     
+                    Divider()
+                        .frame(width: 375)
+                        .frame(height: 0.5)
+                        .overlay(gray)
+                    
+                    HStack {
+                        VStack {
+                            RoundedRectangle(cornerRadius: 15)
+                                .frame(width: 75, height: 75)
+                                .foregroundColor(Color.pink)
+                            
+                            Text("Charlotte's Mirror")
+                                .font(.custom("Cabin", size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(gray)
+                                .multilineTextAlignment(.center)
+                        }
+                        .padding(.trailing, 20)
+                        .frame(width: 175)
+                        
+                        Spacer()
+                        
+                        VStack {
+                            Text("The funky pink mirror from the neighbors down the street.")
+                                .font(.custom("Cabin", size: 18))
+                                .fontWeight(.bold)
+                                .foregroundColor(gray)
+                                .padding(.bottom, 10)
+                                .multilineTextAlignment(.leading)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            
+                            Text("#neon, #fun, #family")
+                                .font(.custom("Cabin", size: 18))
+                                .fontWeight(.bold)
+                                .foregroundColor(blue)
+                                .multilineTextAlignment(.leading)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .frame(width: 175)
+                    }
+                    .padding(20)
+                    
+                    Divider()
+                        .frame(width: 375)
+                        .frame(height: 0.5)
+                        .overlay(gray)
+
                     HStack {
                         VStack {
                             RoundedRectangle(cornerRadius: 15)
                                 .frame(width: 75, height: 75)
                                 .foregroundColor(Color.yellow)
                             
-                            Text("Lemon Yellow")
+                            Text("The Front Door")
                                 .font(.custom("Cabin", size: 22))
                                 .fontWeight(.bold)
                                 .foregroundColor(gray)
-                            
-                            Text("#warm, #inviting, #nature")
-                                .font(.custom("Cabin", size: 18))
-                                .fontWeight(.bold)
-                                .foregroundColor(blue)
                                 .multilineTextAlignment(.center)
                         }
                         .padding(.trailing, 20)
@@ -103,59 +152,30 @@ struct LibraryView: View {
                         
                         Spacer()
                         
-                        Text("Placeholder text goes here!")
-                            .font(.custom("Cabin", size: 18))
-                            .fontWeight(.bold)
-                            .foregroundColor(gray)
-                            .frame(width: 175)
-                    }
-                    .padding(20)
-                    
-                    HStack {
                         VStack {
-                            RoundedRectangle(cornerRadius: 15)
-                                .frame(width: 75, height: 75)
-                                .foregroundColor(Color.teal)
-                            
-                            Text("Ocean Blue")
-                                .font(.custom("Cabin", size: 22))
+                            Text("The paint color on my family's front door.")
+                                .font(.custom("Cabin", size: 18))
                                 .fontWeight(.bold)
                                 .foregroundColor(gray)
+                                .padding(.bottom, 10)
+                                .multilineTextAlignment(.leading)
+                                .frame(maxWidth: .infinity, alignment: .leading)
                             
-                            Text("#cool-tone, #blue, #summer")
+                            Text("#home, #warm, #inviting")
                                 .font(.custom("Cabin", size: 18))
                                 .fontWeight(.bold)
                                 .foregroundColor(blue)
-                                .multilineTextAlignment(.center)
+                                .multilineTextAlignment(.leading)
+                                .frame(maxWidth: .infinity, alignment: .leading)
                         }
-                        .padding(.trailing, 20)
                         .frame(width: 175)
-                        
-                        Spacer()
-                        
-                        Text("Placeholder text goes here!")
-                            .font(.custom("Cabin", size: 18))
-                            .fontWeight(.bold)
-                            .foregroundColor(gray)
-                            .frame(width: 175)
                     }
                     .padding(20)
                     
-//                    VStack {
-//                        RoundedRectangle(cornerRadius: 15)
-//                            .frame(width: 75, height: 75)
-//                            .foregroundColor(Color.red)
-//                        
-//                        Text("Cherry Red")
-//                            .font(.custom("Cabin", size: 22))
-//                            .fontWeight(.bold)
-//                            .foregroundColor(gray)
-//                        
-//                        Text("#summer, #neon")
-//                            .font(.custom("Cabin", size: 18))
-//                            .fontWeight(.bold)
-//                            .foregroundColor(blue)
-//                    }
+                    Divider()
+                        .frame(width: 375)
+                        .frame(height: 0.5)
+                        .overlay(gray)
                     
                     Spacer()
                 }
