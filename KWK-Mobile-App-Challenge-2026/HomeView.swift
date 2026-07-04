@@ -152,8 +152,6 @@ struct HomeView: View {
                             .overlay(gray)
                     }
                     
-                    
-                    // Space to add new colors:
                     Text("LIBRARY")
                         .font(.custom("Anton", size: 28))
                         .fontWeight(.bold)
