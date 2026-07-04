@@ -49,7 +49,7 @@ struct LibraryView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(gray)
                         .padding(.top, -15)
-                        .padding(.bottom, -20)
+                        .padding(.bottom, -25)
                     
                     HStack {
                         VStack {

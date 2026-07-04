@@ -105,7 +105,7 @@ struct HomeView: View {
                         .padding(.top, 10)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    TextField("e.g., #Summer, #Neon", text: $colorTags)
+                    TextField("e.g., #summer, #neon", text: $colorTags)
                         .frame(width: 375, height: 45)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 20)
@@ -126,7 +126,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                         .padding(.trailing, 20)
                     }
-                    .padding(.bottom, 15)
+                    .padding(.bottom, 20)
                     
                     Divider()
                         .frame(width: .infinity)
