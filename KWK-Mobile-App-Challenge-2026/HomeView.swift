@@ -219,16 +219,16 @@ struct HomeView: View {
                         }
                     }
                     
-                    NavigationLink("ABOUT COLOR KEEPER") {
+                    NavigationLink("About Color Keeper") {
                         AboutView()
                     }
-                    .font(.custom("Anton", size: 20))
+                    .font(.custom("Cabin", size: 20))
                     .fontWeight(.bold)
                     .foregroundColor(white)
                     .padding(15)
                     .background(gray)
                     .cornerRadius(10)
-                    .padding(.top, 20)
+                    .padding(.vertical, 20)
                 }
                 .frame(height: nil)
             }
