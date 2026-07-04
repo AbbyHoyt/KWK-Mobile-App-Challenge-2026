@@ -136,9 +136,7 @@ struct HomeView: View {
                     Spacer()
                     
                     NavigationLink(destination: LibraryView()) {
-                        Button("VIEW YOUR LIBRARY") {
-                            
-                        }
+                        Text("VIEW YOUR LIBRARY")
                         .font(.custom("Anton", size: 24))
                         .fontWeight(.bold)
                         .foregroundColor(white)
