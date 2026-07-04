@@ -77,7 +77,7 @@ struct AboutView: View {
                             .padding(.top, -10)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        Text("This struggle inspired me to make Color Keeper, a simple place to store colors you love!")
+                        Text("This struggle inspired me to make Color Keeper, a simple place to store the colors you love!")
                             .font(.custom("Cabin", size: 22))
                             .fontWeight(.bold)
                             .foregroundColor(gray)
