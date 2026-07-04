@@ -9,15 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     // Define color palette.
-    // let white = Color(red: 248 / 255.0, green: 255 / 255.0, blue: 229 / 255.0)
-    // let pink = Color(red: 239 / 255.0, green: 71 / 255.0, blue: 111 / 255.0)
-    // let yellow = Color(red: 255 / 255.0, green: 196 / 255.0, blue: 61 / 255.0)
-    // let green = Color(red: 6 / 255.0, green: 214 / 255.0, blue: 160 / 255.0)
-    // let teal = Color(red: 27 / 255.0, green: 154 / 255.0, blue: 170 / 255.0)
-    
     let white = Color(red: 232 / 255.0, green: 237 / 255.0, blue: 242 / 255.0)
     let gray = Color(red: 44 / 255.0, green: 57 / 255.0, blue: 71 / 255.0)
-    let blue = Color(red: 84 / 255.0, green: 122 / 255.0, blue: 149 / 255.0)
     
     @State private var colorName: String = ""
     @State private var colorSelection: Color = .pink
@@ -39,7 +32,7 @@ struct HomeView: View {
                             .cornerRadius(150)
                             .padding(.horizontal, 20)
                         
-                        Text("Color Keeper")
+                        Text("COLOR KEEPER")
                             .font(.custom("Anton", size: 35))
                             .fontWeight(.bold)
                             .foregroundColor(gray)
@@ -53,7 +46,7 @@ struct HomeView: View {
                         .overlay(gray)
                         .padding(.top, -10)
                     
-                    Text("Add a Color")
+                    Text("ADD A COLOR")
                         .font(.custom("Anton", size: 28))
                         .fontWeight(.bold)
                         .padding(20)
@@ -102,6 +95,7 @@ struct HomeView: View {
                         .frame(width: 375, height: 45)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 20)
+                        .padding(.top, -10)
                     
                     Text("Tags:")
                         .font(.custom("Cabin", size: 22))
@@ -116,6 +110,7 @@ struct HomeView: View {
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal, 20)
                         .padding(.bottom, 10)
+                        .padding(.top, -10)
                     
                     HStack {
                         Spacer()
@@ -127,7 +122,7 @@ struct HomeView: View {
                         .fontWeight(.bold)
                         .foregroundColor(white)
                         .padding(10)
-                        .background(blue)
+                        .background(gray)
                         .cornerRadius(10)
                         .padding(.trailing, 20)
                     }
@@ -141,7 +136,7 @@ struct HomeView: View {
                     Spacer()
                     
                     NavigationLink(destination: LibraryView()) {
-                        Button("View Your Library") {
+                        Button("VIEW YOUR LIBRARY") {
                             
                         }
                         .font(.custom("Anton", size: 24))
