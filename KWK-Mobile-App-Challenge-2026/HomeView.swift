@@ -19,6 +19,7 @@ struct HomeView: View {
     // Define color palette.
     let white = Color(red: 232 / 255.0, green: 237 / 255.0, blue: 242 / 255.0)
     let gray = Color(red: 44 / 255.0, green: 57 / 255.0, blue: 71 / 255.0)
+    let blue = Color(red: 82 / 255.0, green: 122 / 255.0, blue: 149 / 255.0)
     
     @State private var colorName: String = ""
     @State private var colorSelection: Color = .pink
@@ -27,13 +28,6 @@ struct HomeView: View {
     
     @State private var items: [ColorItem] = []
     @State private var itemCount = 1
-    
-//    enum colorDetails {
-//        case text(String)
-//        case color(Color)
-//    }
-//    
-//    @State private var userColor: [colorDetails] = []
     
     var body: some View {
         NavigationStack {
@@ -136,10 +130,6 @@ struct HomeView: View {
                             
                             Button("Submit Color") {
                                 addColorItem()
-    //                            userColor.append(.text(colorName))
-    //                            userColor.append(.color(colorSelection))
-    //                            userColor.append(.text(colorDescription))
-    //                            userColor.append(.text(colorTags))
     
                                 colorName = ""
                                 colorSelection = Color.pink
@@ -179,21 +169,63 @@ struct HomeView: View {
                     // Space to add new colors:
                     VStack(spacing: 10) {
                         if items.isEmpty {
-                            Text("No colors in library yet!")
+                            Text("No colors in your library yet!")
+                                .font(.custom("Cabin", size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(gray)
+                                .multilineTextAlignment(.center)
+                                .padding(.top, 10)
                         } else {
                             ForEach($items) { item in
-                                Text(item.name.wrappedValue)
+                                HStack {
+                                    VStack {
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .frame(width: 75, height: 75)
+                                            .foregroundColor(item.selection.wrappedValue)
+                                        
+                                        Text(item.name.wrappedValue)
+                                            .font(.custom("Cabin", size: 22))
+                                            .fontWeight(.bold)
+                                            .foregroundColor(gray)
+                                            .multilineTextAlignment(.center)
+                                    }
+                                    .padding(.trailing, 20)
+                                    .frame(width: 175)
+                                    
+                                    Spacer()
+                                    
+                                    VStack {
+                                        Text(item.description.wrappedValue)
+                                            .font(.custom("Cabin", size: 18))
+                                            .fontWeight(.bold)
+                                            .foregroundColor(gray)
+                                            .padding(.bottom, 10)
+                                            .multilineTextAlignment(.leading)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                        
+                                        Text(item.tags.wrappedValue)
+                                            .font(.custom("Cabin", size: 18))
+                                            .fontWeight(.bold)
+                                            .foregroundColor(blue)
+                                            .multilineTextAlignment(.leading)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                    }
+                                    .frame(width: 175)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                }
+                                .padding(20)
                                 
-                                RoundedRectangle(cornerRadius: 15)
-                                    .frame(width: 20, height: 20)
-                                    .foregroundColor(item.selection.wrappedValue)
-                                
-                                Text(item.description.wrappedValue)
-                                
-                                Text(item.tags.wrappedValue)
+                                Divider()
+                                    .frame(width: 375)
+                                    .frame(height: 0.5)
+                                    .overlay(gray)
                             }
                         }
                     }
+                    
+
+                    
+                    
                     
                     
                 }
