@@ -36,6 +36,7 @@ struct ContentView: View {
                         .padding(.bottom, 60)
                     
                     // Get started button.
+                    // On click, takes the user to the "Home" page.
                     NavigationLink(destination: HomeView()) {
                         Text("Get Started")
                             .font(.custom("Cabin", size: 24))

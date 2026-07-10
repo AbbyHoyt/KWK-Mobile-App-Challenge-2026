@@ -47,7 +47,7 @@ struct AboutView: View {
                             .overlay(gray)
                             .padding(.top, -10)
                         
-                        // About section header text.
+                        // "About" section header text.
                         Text("ABOUT")
                             .font(.custom("Anton", size: 28))
                             .fontWeight(.bold)
@@ -66,7 +66,7 @@ struct AboutView: View {
                             .padding(.top, -10)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        // Why section header text.
+                        // "Why I Created Color Keeper" section header text.
                         Text("WHY I CREATED COLOR KEEPER")
                             .font(.custom("Anton", size: 28))
                             .fontWeight(.bold)

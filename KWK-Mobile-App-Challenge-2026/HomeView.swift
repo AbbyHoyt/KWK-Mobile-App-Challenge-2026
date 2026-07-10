@@ -22,7 +22,7 @@ struct HomeView: View {
     let gray = Color(red: 44 / 255.0, green: 57 / 255.0, blue: 71 / 255.0)
     let blue = Color(red: 82 / 255.0, green: 122 / 255.0, blue: 149 / 255.0)
     
-    // Variables to hold the name, selection, description, and tags for a color the user inptus.
+    // Variables to hold the name, selection, description, and tags for a color the user inputs.
     @State private var colorName: String = ""
     @State private var colorSelection: Color = .pink
     @State private var colorDescription: String = ""
@@ -66,7 +66,7 @@ struct HomeView: View {
                             .overlay(gray)
                             .padding(.top, -10)
                         
-                        // Add a color section header.
+                        // "Add a Color" section header.
                         Text("ADD A COLOR")
                             .font(.custom("Anton", size: 28))
                             .fontWeight(.bold)
@@ -102,7 +102,7 @@ struct HomeView: View {
                             .padding(.top, 10)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        // Preview of selected color.
+                        // Preview of the selected color.
                         RoundedRectangle(cornerRadius: 15)
                             .fill(colorSelection)
                             .frame(width: 375, height: 125)
@@ -143,6 +143,7 @@ struct HomeView: View {
                             .padding(.top, -10)
                         
                         // Submit button.
+                        // On click, adds a new color to the library below.
                         HStack {
                             Spacer()
                             
@@ -172,7 +173,7 @@ struct HomeView: View {
                             .overlay(gray)
                     }
                     
-                    // Library section header.
+                    // "Library" section header.
                     Text("LIBRARY")
                         .font(.custom("Anton", size: 28))
                         .fontWeight(.bold)
@@ -185,7 +186,7 @@ struct HomeView: View {
                     // Display color library.
                     VStack(spacing: 10) {
                         if items.isEmpty {
-                            // If library is empty, display a "no entries" message.
+                            // If the library is empty, display a "no entries" message.
                             Text("No colors in your library yet!")
                                 .font(.custom("Cabin", size: 22))
                                 .fontWeight(.bold)
@@ -193,7 +194,7 @@ struct HomeView: View {
                                 .multilineTextAlignment(.center)
                                 .padding(.top, 10)
                         } else {
-                            // If library is not empty, display each item.
+                            // If the library is not empty, display each item that has been added.
                             ForEach($items) { item in
                                 HStack {
                                     // Color and name column.
@@ -248,7 +249,8 @@ struct HomeView: View {
                         }
                     }
                     
-                    // Link to the about page.
+                    // About button.
+                    // On click, takes the user to the "About" page.
                     NavigationLink("About Color Keeper") {
                         AboutView()
                     }
