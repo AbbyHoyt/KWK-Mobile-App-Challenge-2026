@@ -20,6 +20,7 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 
                 VStack {
+                    // App logo.
                     Image("logo-new")
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
@@ -27,12 +28,14 @@ struct ContentView: View {
                         .padding(.horizontal, 50)
                         .padding(.bottom, 5)
                     
+                    // App name.
                     Text("COLOR KEEPER")
                         .font(.custom("Anton-Regular", size: 45))
                         .fontWeight(.bold)
                         .foregroundColor(gray)
                         .padding(.bottom, 60)
                     
+                    // Get started button.
                     NavigationLink(destination: HomeView()) {
                         Text("Get Started")
                             .font(.custom("Cabin", size: 24))
