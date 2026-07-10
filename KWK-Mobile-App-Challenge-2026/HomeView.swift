@@ -35,6 +35,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
+                // Set background color.
                 Color(white)
                     .ignoresSafeArea()
                 
@@ -143,7 +144,7 @@ struct HomeView: View {
                             .padding(.top, -10)
                         
                         // Submit button.
-                        // On click, adds a new color to the library below.
+                        // On click, adds a new color to the library displayed below.
                         HStack {
                             Spacer()
                             
@@ -151,7 +152,7 @@ struct HomeView: View {
                                 // Call addColorItem function.
                                 addColorItem()
     
-                                // Clear user input.
+                                // Clear/reset user input.
                                 colorName = ""
                                 colorSelection = Color.pink
                                 colorDescription = ""
@@ -276,7 +277,7 @@ struct HomeView: View {
             description: colorDescription,
             tags: colorTags
         )
-        // Append the new ColorItem instance to items and increase itemCount accordingly.
+        // Append the new ColorItem instance to the items list and increase itemCount accordingly.
         items.append(newItem)
         itemCount += 1
     }

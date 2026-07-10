@@ -16,6 +16,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
+                // Set background color.
                 Color(white)
                     .ignoresSafeArea()
                 
